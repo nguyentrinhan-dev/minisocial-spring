@@ -1,4 +1,4 @@
-# Minisocial Springboot version ![Mini Social-Network](https://github.com/nguyentrinhan-dev/minisocial-spring/workflows/Mini%20Social%20Network/badge.svg)
+# Minisocial Springboot version ![Mini Social-Network](https://github.com/nguyentrinhan-dev/minisocial-spring/workflows/Build%20jar/badge.svg)
 
 ### This project is referenced to: [minisocialnetwork](https://github.com/nguyentrinhan-dev/minisocialnetwork).
 
