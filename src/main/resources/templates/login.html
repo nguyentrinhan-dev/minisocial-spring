@@ -13,19 +13,20 @@
 
 <body>
 
-    <!-- header -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">
-                    Toggle navigation
-                </span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand" th:href="@{/}">Registration and login module</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">
+                        Toggle navigation
+                    </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" th:href="@{/}">Registration and login module</a>
+            </div>
         </div>
     </nav>
     <br>
@@ -51,26 +52,19 @@
                     </div>
                     <div class="form-group">
                         <label for="username">Email</label>
-                        <input type="text" name="username" id="username"
-                         autofocus
-                         class="form-control" placeholder="example@email.com"
-                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                         title="Email must be formated as xx@xx.xx"
-                        >
+                        <input type="text" name="username" id="username" autofocus class="form-control"
+                            placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Email must be formated as xx@xx.xx">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password"
-                         autofocus
-                         class="form-control" placeholder="********"
-                         minlength="8"                         
-                        >
+                        <input type="password" name="password" id="password" autofocus class="form-control"
+                            placeholder="********" minlength="8">
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <input type="submit" name="login-submit" id="login-submit"
-                             class="form-control btn btn-primary" value="Login"
-                            >
+                                class="form-control btn btn-primary" value="Login">
                         </div>
                     </div>
                     <div class="form-group">
