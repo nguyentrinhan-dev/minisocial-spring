@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  application:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+    depends_on:
+      - sqlserver
+
+  sqlserver:
+    container_name: 'sqlserver'
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+      - SA_PASSWORD=123456789
+      - MSSQL_DB=MiniSocial
+      - MSSQL_USER=sa
+      - MSSQL_PASSWORD=123456789
