@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Properties ###
-application-override.properties
+application-local.properties
