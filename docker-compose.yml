@@ -13,10 +13,12 @@ services:
   sqlserver:
     container_name: 'sqlserver'
     image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+    - 1433:1433
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
-      - SA_PASSWORD=123456789
+      - MSSQL_PID=Express
+      - SA_PASSWORD=HardPass1
       - MSSQL_DB=MiniSocial
       - MSSQL_USER=sa
-      - MSSQL_PASSWORD=123456789
+      - MSSQL_PASSWORD=HardPass1
