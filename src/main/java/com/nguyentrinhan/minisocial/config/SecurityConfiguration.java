@@ -1,6 +1,7 @@
 package com.nguyentrinhan.minisocial.config;
 
 import com.nguyentrinhan.minisocial.config.constant.Resources;
+import com.nguyentrinhan.minisocial.core.service.CustomUserDetailService;
 import com.nguyentrinhan.minisocial.core.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private CustomUserDetailService customUserDetailService;
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -28,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-        auth.setUserDetailsService(userService);
+        auth.setUserDetailsService(customUserDetailService);
         auth.setPasswordEncoder(passwordEncoder());
         return auth;
     }
